@@ -1,0 +1,661 @@
+/* --- CSS Variables for Theme Management --- */
+:root {
+    /* Light Mode Colors */
+    --primary-gradient-start: #e07f2b; /* Orange */
+    --primary-gradient-end: #2f2f70;   /* Dark Blue */
+    --secondary-background: rgb(209, 209, 255); /* Light Blue/Purple */
+    --text-color-primary: #333;
+    --text-color-secondary: #555;
+    --card-background: #ffffff;
+    --card-text-color: #333;
+    --footer-background: rgb(38, 23, 106);
+    --footer-text-color: white;
+    --footer-link-color: rgb(187, 187, 187);
+    --contact-background: rgb(140, 170, 199);
+    --button-bg: rgb(8, 8, 58);
+    --button-text: white;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Dark Mode Variables --- */
+body.dark-mode {
+    --primary-gradient-start: #2c2c6c; /* Darker Blue */
+    --primary-gradient-end: #000000;   /* Black */
+    --secondary-background: #1e1e1e;   /* Dark Grey */
+    --text-color-primary: #e0e0e0;
+    --text-color-secondary: #a0a0a0;
+    --card-background: #2a2a2a;
+    --card-text-color: #f1f1f1;
+    --footer-background: #1a1a1a;
+    --footer-text-color: #ccc;
+    --footer-link-color: #a0a0a0;
+    --contact-background: #333;
+    --button-bg: #e07f2b; /* Orange for dark mode buttons */
+    --button-text: white;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    line-height: 1.6;
+    color: var(--text-color-primary);
+    background-color: var(--card-background); /* Default background for entire body */
+    transition: background-color 0.4s ease, color 0.4s ease; /* Smooth transition for dark mode */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif; /* More elegant font for headings */
+    color: var(--text-color-primary);
+}
+
+p {
+    color: var(--text-color-secondary);
+}
+
+.section-title {
+    font-size: 3.5rem; /* Larger for impact */
+    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent; /* Fallback */
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.lead-text {
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* --- Navbar Styles --- */
+.navbar {
+    background: linear-gradient(90deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+    height: 100px;
+    transition: height 0.3s ease, background 0.4s ease; /* Smooth transition for height and background */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+}
+
+.navbar-brand .logo-img {
+    width: 100px; /* Adjust logo size */
+    background: white;
+    border-radius: 10px;
+    padding: 5px;
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    padding: 0.5rem 0; /* Adjust padding for hover effect */
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease-out;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+    transform: translateY(-2px);
+    color: #f8f9fa !important; /* Lighter white on hover */
+}
+
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Navbar Shrink Effect (Controlled by JS) */
+.navbar.shrink {
+    height: 70px; /* Smaller height on scroll */
+    padding: 0.5rem 0;
+}
+
+.navbar.shrink .logo-img {
+    width: 80px; /* Smaller logo on scroll */
+}
+
+
+/* --- Theme Toggle Button --- */
+#theme-toggle {
+    background: linear-gradient(145deg, var(--primary-gradient-end), var(--primary-gradient-start));
+    color: var(--button-text);
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    margin-left: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background: linear-gradient(145deg, var(--primary-gradient-start), var(--primary-gradient-end));
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+#theme-toggle:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 650px; /* Slightly taller for visual impact */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 100px; /* To account for fixed navbar */
+}
+
+.hero-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.hero-main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay for text readability */
+    z-index: 0;
+}
+
+.hero-main h1 {
+    font-size: 5rem; /* Larger hero text */
+    color: white;
+    z-index: 1;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    font-weight: bold;
+    animation: fadeIn 2s ease-out; /* Initial animation */
+}
+
+/* --- Cards (Benefits, Activities, Tips) --- */
+.benefit-card, .activity-card, .tip-card {
+    background-color: var(--card-background);
+    color: var(--card-text-color);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensure cards in a row have equal height */
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-card:hover, .activity-card:hover, .tip-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.benefit-card img, .activity-card img {
+    height: 220px; /* Standard height for card images */
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.benefit-card:hover img, .activity-card:hover img {
+    transform: scale(1.08); /* Subtle zoom on image hover */
+}
+
+.benefit-card .card-body, .activity-card .card-body, .tip-card .card-body {
+    padding: 25px;
+    flex-grow: 1; /* Allow card body to expand */
+}
+
+.benefit-card .card-title, .activity-card .card-title, .tip-card .card-title {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--primary-gradient-end); /* Match heading color from gradient */
+    transition: color 0.4s ease;
+}
+
+.dark-mode .benefit-card .card-title,
+.dark-mode .activity-card .card-title,
+.dark-mode .tip-card .card-title {
+    color: var(--primary-gradient-start); /* Adjust for dark mode */
+}
+
+.benefit-card .card-text, .activity-card .card-text, .tip-card .card-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--card-text-color);
+    transition: color 0.4s ease;
+}
+
+/* Specific Section Backgrounds */
+.benefits-section {
+    background-color: var(--secondary-background);
+    transition: background-color 0.4s ease;
+}
+
+.activities-section {
+    background-color: var(--card-background); /* Use default body background */
+    transition: background-color 0.4s ease;
+}
+
+.travel-tips-section {
+    background-color: var(--secondary-background);
+    transition: background-color 0.4s ease;
+}
+
+
+/* --- Carousel (Galleries) --- */
+.gallery-section {
+    background-color: var(--card-background);
+    transition: background-color 0.4s ease;
+}
+
+#carouselExampleAutoplaying {
+    max-width: 900px; /* Slightly wider carousel */
+    height: 550px; /* Maintain aspect ratio for common image sizes */
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow 0.4s ease;
+}
+
+#carouselExampleAutoplaying .carousel-inner {
+    height: 100%;
+}
+
+#carouselExampleAutoplaying .carousel-item {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images cover the area without distortion */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    padding: 15px;
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: var(--contact-background);
+    padding: 60px 0;
+    transition: background-color 0.4s ease;
+}
+
+.contact-section .section-title {
+    color: var(--text-color-primary); /* Make title readable on contact background */
+    -webkit-text-fill-color: var(--text-color-primary);
+}
+
+.dark-mode .contact-section .section-title {
+    -webkit-text-fill-color: var(--text-color-primary); /* Ensure it stays light in dark mode */
+}
+
+.contact-section .lead-text {
+    color: var(--text-color-secondary);
+}
+
+.contact-form {
+    background-color: var(--card-background);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-form .form-label {
+    font-weight: 500;
+    color: var(--card-text-color);
+    transition: color 0.4s ease;
+}
+
+.contact-form .form-control {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: var(--card-background); /* Ensure input background matches card */
+    color: var(--card-text-color);
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: var(--primary-gradient-start);
+    box-shadow: 0 0 0 0.25rem rgba(224, 127, 43, 0.25);
+}
+
+.contact-form .btn-primary {
+    background-color: var(--primary-gradient-start);
+    border-color: var(--primary-gradient-start);
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-primary:hover {
+    background-color: var(--primary-gradient-end);
+    border-color: var(--primary-gradient-end);
+    transform: translateY(-2px);
+}
+
+.contact-form .btn-outline-secondary {
+    border-color: var(--button-bg);
+    color: var(--button-bg);
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .btn-outline-secondary:hover {
+    background-color: var(--button-bg);
+    color: white;
+    transform: translateY(-2px);
+}
+
+
+/* --- Footer Styles --- */
+.main-footer {
+    background: var(--footer-background);
+    color: var(--footer-text-color);
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 15px; /* Spacing between icons */
+}
+
+.footer-icons a img {
+    width: 30px; /* Slightly larger social icons */
+    transition: transform 0.3s ease;
+}
+
+.footer-icons a img:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.footer-links li a {
+    color: var(--footer-link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    padding: 3px 0; /* Add padding for clickable area */
+    display: inline-block; /* Required for padding */
+}
+
+.footer-links li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.footer-ban {
+    font-size: 0.9rem;
+    color: var(--footer-link-color);
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-ban span {
+    font-weight: bold;
+    color: white;
+}
+
+/* --- Back to Top Button --- */
+#back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-gradient-end);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+#back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#back-to-top:hover {
+    background-color: var(--primary-gradient-start);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* --- Animations --- */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* ----------------- Responsive Design ----------------- */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.7rem;
+        padding-left: 0.7rem;
+    }
+}
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991.98px) {
+    .navbar {
+        height: auto;
+        padding: 1rem;
+    }
+
+    .navbar-brand .logo-img {
+        width: 80px;
+    }
+
+    .navbar-nav {
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0; /* Remove horizontal margin for vertical nav */
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0; /* More vertical spacing */
+    }
+    
+    .navbar-nav .nav-link::after {
+        width: 50%; /* Smaller underline for mobile */
+        left: 25%;
+    }
+
+    #theme-toggle {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 150px; /* Make button wider */
+    }
+
+    .hero-section {
+        height: 450px;
+        margin-top: 80px; /* Adjust for smaller fixed navbar height */
+    }
+
+    .hero-main h1 {
+        font-size: 3.5rem;
+    }
+
+    .section-title {
+        font-size: 2.8rem;
+    }
+
+    .lead-text {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+
+    .benefit-card img, .activity-card img {
+        height: 180px; /* Adjust image height for tablets */
+    }
+
+    #carouselExampleAutoplaying {
+        height: 400px; /* Adjust carousel height */
+    }
+
+    .main-footer .row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-footer .col-md-4, .main-footer .col-md-8 {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .main-footer .col-md-8 .row > div {
+        margin-bottom: 20px; /* Space between footer link columns */
+    }
+    .main-footer .col-md-8 .row > div:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-icons {
+        justify-content: center;
+    }
+    .footer-links {
+        padding-left: 0; /* Remove default list padding */
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767.98px) {
+    .hero-section {
+        height: 350px;
+    }
+
+    .hero-main h1 {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    #carouselExampleAutoplaying {
+        height: 300px;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+    
+    .d-md-flex {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+    }
+    .d-md-flex .btn {
+        width: 100%;
+        margin-bottom: 10px; /* Add space between stacked buttons */
+    }
+    .d-md-flex .btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .footer-heading {
+        font-size: 1.1rem;
+    }
+    .footer-links li a {
+        font-size: 0.9rem;
+    }
+    .footer-ban {
+        font-size: 0.8rem;
+    }
+}

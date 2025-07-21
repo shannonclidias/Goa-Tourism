@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goa Tourism - Your Ultimate Guide</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="main-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#home">
+                    <img src="logo.png" alt="Goa Tourism Logo" class="logo-img">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#benefits">Reasons to Visit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#activities">What to Do</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galleries">Our Galleries</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#tips">Travel Tips</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item ms-lg-3">
+                            <button id="theme-toggle" class="btn btn-primary">Dark Mode</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-main" style="background-image: url('hero.jpg')">
+                <div class="overlay"></div>
+                <h1 class="animate-fade-in">Experience the Magic of Goa</h1>
+            </div>
+        </section>
+
+        <section class="container my-5 py-3 animate-on-scroll">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-10">
+                    <h2 class="section-title">Welcome to Goa Tourism</h2>
+                    <p class="lead-text mt-4">
+                        Welcome to Goa, where the sun always shines a little brighter, and every day feels like a celebration of life. Nestled along the shimmering Arabian Sea, Goa is India’s coastal gem—where golden beaches meet lush green hinterlands, and colonial charm blends seamlessly with vibrant local culture. Whether you seek adventure in the waves, serenity in centuries-old churches, or flavor in a spicy fish curry, Goa invites you with open arms and an easy smile. Here, every sunset is a memory, and every path leads to something beautiful.
+                    </p>
+                    <p class="lead-text mt-3">
+                        Goa is more than just a holiday spot—it's a state of mind. Lose yourself in the rhythm of local drums during a beach festival, wander through Portuguese-era alleyways echoing with stories, or find peace in the gentle hum of palm trees swaying overhead. From buzzing flea markets to hidden waterfalls, from yoga retreats to neon nightlife, Goa offers something for every soul. Come explore, unwind, and fall in love with every sun-soaked corner—because in Goa, the journey is as magical as the destination.
+                    </p>
+                    <p class="lead-text mt-3">
+                        And the beauty of Goa isn’t just in its places—it's in its people. Warm, welcoming, and proudly rooted in tradition, Goans embody the spirit of *susegad*—a relaxed, contented way of life that lets you breathe deeper, laugh louder, and live slower. Whether you're sharing seafood with locals at a rustic beach shack or dancing under the stars to live music, you'll feel the connection that makes Goa unforgettable. This is more than tourism—it’s an invitation to belong.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="benefits-section py-5" id="benefits">
+            <div class="container">
+                <h2 class="text-center section-title mb-5 animate-on-scroll">Top Reasons to Visit Goa</h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="sunset.webp" class="card-img-top" alt="Golden beaches and sunsets" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Pristine Beaches & Sunsets</h3>
+                                <p class="card-text">Golden sands, swaying palms, and unforgettable sunsets make Goa’s beaches perfect for relaxing, surfing, or vibrant beach parties.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="culture.jfif" class="card-img-top" alt="Vibrant Goan culture" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Rich & Vibrant Culture</h3>
+                                <p class="card-text">From traditional Konkani festivals to Portuguese-influenced architecture, Goa is a rich cultural mosaic waiting to be explored.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="history.jpg" class="card-img-top" alt="Historical monuments in Goa" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Unforgettable Heritage & History</h3>
+                                <p class="card-text">Discover ancient forts, colonial churches, and centuries-old temples that tell stories of Goa’s layered, fascinating past.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="spice.avif" class="card-img-top" alt="Goan spice plantation" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Aromatic Spice Plantations</h3>
+                                <p class="card-text">Take a stroll through aromatic spice farms and learn about Goa’s deep-rooted connection with nature and traditional Ayurveda.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="food.jpg" class="card-img-top" alt="Goan seafood curry" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Delectable Goan Cuisine</h3>
+                                <p class="card-text">Savor the spicy, flavorful blend of Indian and Portuguese influences in dishes like Xacuti, Vindaloo, and the sweet Bebinca.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card benefit-card animate-on-scroll">
+                            <img src="night.jfif" class="card-img-top" alt="Goan nightlife and music" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Vibrant Nightlife & Music</h3>
+                                <p class="card-text">From lively beachside shacks to neon-lit clubs, Goa’s nightlife is legendary, with music and dance filling the air till dawn.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="activities-section py-5" id="activities">
+            <div class="container">
+                <h2 class="text-center section-title mb-5 animate-on-scroll">What to Do in Goa</h2>
+                <div class="row justify-content-center g-4">
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="watersports.jpg" class="card-img-top" alt="Water sports in Goa" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Thrill with Water Sports</h3>
+                                <p class="card-text">Experience the adrenaline rush with jet-skiing, parasailing, banana boat rides, and more on Goa's popular beaches.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="markets.avif" class="card-img-top" alt="Goan flea markets" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Explore Bustling Markets</h3>
+                                <p class="card-text">Dive into the vibrant Anjuna Flea Market or Saturday Night Bazaar for unique souvenirs, handicrafts, and local flavors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="casino.avif" class="card-img-top" alt="Casinos in Goa" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Try Your Luck at Casinos</h3>
+                                <p class="card-text">Enjoy a night of entertainment and games at Goa's famous offshore casinos, offering a luxurious experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="yoga.jfif" class="card-img-top" alt="Yoga and wellness retreats" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Rejuvenate with Yoga & Wellness</h3>
+                                <p class="card-text">Find serenity at one of Goa's many yoga retreats and wellness centers, perfect for mind, body, and soul rejuvenation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="church-goa.jfif" class="card-img-top" alt="Old Goa churches" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Visit Historic Churches & Temples</h3>
+                                <p class="card-text">Step back in time at UNESCO World Heritage sites like the Basilica of Bom Jesus or the beautiful Mangeshi Temple.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card activity-card animate-on-scroll">
+                            <img src="cruise.jpg" class="card-img-top" alt="Goan river cruises" loading="lazy">
+                            <div class="card-body">
+                                <h3 class="card-title">Enjoy River Cruises</h3>
+                                <p class="card-text">Take a leisurely sunset cruise on the Mandovi River, often accompanied by live music, folk dances, and delicious food.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section py-5" id="galleries">
+            <div class="container">
+                <h2 class="text-center section-title mb-5 animate-on-scroll">Our Galleries</h2>
+                <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade animate-on-scroll" data-bs-ride="carousel" data-bs-interval="3500">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="beachess.jpg" class="d-block w-100" alt="Goan beaches">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="sky-dining.webp" class="d-block w-100" alt="Sky dining experience in Goa">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="bungee.jfif" class="d-block w-100" alt="Bungee jumping in Goa">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="gokart.avif" class="d-block w-100" alt="Go-karting in Goa">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="offroad.avif" class="d-block w-100" alt="Off-roading adventure in Goa">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="travel-tips-section py-5" id="tips">
+            <div class="container">
+                <h2 class="text-center section-title mb-5 animate-on-scroll">Plan Your Trip: Essential Travel Tips</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Best Time to Visit</h3>
+                                <p class="card-text">
+                                    The ideal time to visit Goa is from **mid-November to mid-February**, when the weather is pleasantly cool and dry. This period is perfect for enjoying beach activities, festivals, and exploring the state without the humidity of the monsoon or the intense heat of summer. Avoid the peak summer months (March to May) for extreme heat, and the monsoon season (June to October) if you're not a fan of heavy rains, though the landscapes are incredibly lush then.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Getting Around Goa</h3>
+                                <p class="card-text">
+                                    Renting a **scooter or motorbike** is the most popular and flexible way to explore Goa's winding roads and hidden gems. Taxis are available but can be expensive. For longer distances, consider pre-booked cabs or ride-sharing apps where available. Public buses are an economical option for connecting major towns. Always negotiate taxi fares beforehand or insist on using a meter.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Safety & Health</h3>
+                                <p class="card-text">
+                                    Goa is generally safe, but always be mindful of your belongings, especially on crowded beaches. Stay hydrated, use sunscreen, and protect yourself from mosquitoes. Drink bottled water and be cautious with street food to avoid stomach issues. It's advisable to have travel insurance. Keep emergency contact numbers handy.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Accommodation</h3>
+                                <p class="card-text">
+                                    Goa offers a wide range of accommodation, from luxury resorts and boutique hotels to charming guesthouses and beach shacks. Book well in advance, especially if traveling during peak season or holidays, to secure the best rates and locations. Consider staying in North Goa for lively nightlife or South Goa for a more serene experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Local Etiquette</h3>
+                                <p class="card-text">
+                                    While Goa is relaxed, respecting local customs is appreciated. When visiting religious sites, dress modestly (shoulders and knees covered). Always ask for permission before taking photos of people. Bargaining is common in markets, but be polite. Learning a few Konkani phrases can enhance your experience.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex">
+                        <div class="card tip-card animate-on-scroll">
+                            <div class="card-body">
+                                <h3 class="card-title">Responsible Tourism</h3>
+                                <p class="card-text">
+                                    Help keep Goa beautiful by disposing of waste responsibly. Avoid plastic where possible and support local businesses. Be mindful of noise levels, especially at night. Respect wildlife and natural habitats. Leave only footprints, take only memories.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-section py-5" id="contact">
+            <div class="container">
+                <h2 class="text-center section-title mb-4 animate-on-scroll">Get in Touch with Goa Tourism</h2>
+                <p class="text-center lead-text mb-5 animate-on-scroll">Have questions or want to plan your dream trip? Send us a message!</p>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <form action="#" method="POST" class="contact-form animate-on-scroll">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Your Name:</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Your Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email address" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Subject:</label>
+                                <input type="text" class="form-control" id="subject" placeholder="What's your message about?">
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label">Your Message:</label>
+                                <textarea class="form-control" id="message" rows="6" placeholder="Write your message here..." required></textarea>
+                            </div>
+                            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                                <button type="reset" class="btn btn-outline-secondary btn-lg">Reset</button>
+                                <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer py-4">
+        <div class="container">
+            <div class="row justify-content-between align-items-center mb-3">
+                <div class="col-md-4 text-center text-md-start">
+                    <p class="footer-heading mb-3">Connect with Goa Tourism</p>
+                    <div class="footer-icons">
+                        <a href="https://www.facebook.com/officialgoatourism" target="_blank" aria-label="Facebook"><img src="Facebook_logo.png" alt="Facebook"></a>
+                        <a href="https://www.instagram.com/goatourism/" target="_blank" aria-label="Instagram"><img src="instagram.png" alt="Instagram"></a>
+                        <a href="https://www.pinterest.com/tourismgoa/" target="_blank" aria-label="Pinterest"><img src="pinterest.png" alt="Pinterest"></a>
+                        <a href="https://x.com/TourismGoa" target="_blank" aria-label="Twitter"><img src="twitter.png" alt="Twitter"></a>
+                        <a href="https://www.youtube.com/user/goatourism" target="_blank" aria-label="YouTube"><img src="youtube.webp" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="col-md-8 text-center text-md-end">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <p class="footer-heading mb-2">Useful Links</p>
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="#">RTI</a></li>
+                                <li><a href="#">MPT Terms & Conditions</a></li>
+                                <li><a href="#">Participate in Trade</a></li>
+                                <li><a href="#">Trade Fair Calendars</a></li>
+                                <li><a href="#">Goa Miles</a></li>
+                                <li><a href="#">Downloads</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 mt-3 mt-sm-0">
+                            <p class="footer-heading mb-2">Others</p>
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="#">Brochures</a></li>
+                                <li><a href="#">Media Room</a></li>
+                                <li><a href="#">Vacancies</a></li>
+                                <li><a href="#">Important Numbers</a></li>
+                                <li><a href="#">Newsletters</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 mt-3 mt-sm-0">
+                            <p class="footer-heading mb-2">Policies</p>
+                            <ul class="list-unstyled footer-links">
+                                <li><a href="#">Terms & Conditions</a></li>
+                                <li><a href="#">Hyper Linking Policy</a></li>
+                                <li><a href="#">Copyright Policy</a></li>
+                                <li><a href="#">Refund Policy</a></li>
+                                <li><a href="#">Privacy Policy</a></li>
+                                <li><a href="#">Disclaimer Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="footer-ban mt-3">2025 &copy; All Rights Reserved | Developed and Maintained by <span>Shannon Dias</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" class="btn btn-dark rounded-circle animate-fade-in">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"/>
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script src="index.js"></script>
+</body>
+</html>
